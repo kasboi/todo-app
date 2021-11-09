@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--NAV BAR-->
+    <nav class="teal lighten-2">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo" style="margin-left: 1rem;">Task Master</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+              <li class="logged-in" style="display: none;">
+                <a href="#" id="logout">Logout</a>
+              </li>
+              <li class="logged-in" style="display: none;">
+                <a href="#" data-target="modal-create" class="modal-trigger">Create Task</a>
+              </li>
+              <li class="logged-out" style="display: none;">
+                <a href="#" data-target="modal-login"  class="modal-trigger">Login</a>
+              </li>
+              <li class="logged-out" style="display: none;">
+                <a href="#" data-target="modal-signup" class="modal-trigger">Sign up</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    <!--MOBILE SIDENAV-->
+      <ul class="sidenav ssidenav-close" id="mobile-demo">
+        <li class="logged-in" style="display: none;">
+            <a href="#" class="logout">Logout</a>
+          </li>
+          <li class="logged-in" style="display: none;">
+            <a href="#" data-target="modal-create" class="modal-trigger">Create Task</a>
+          </li>
+          <li class="logged-out" style="display: none;">
+            <a href="#" data-target="modal-login" class="modal-trigger">Login</a>
+          </li>
+          <li class="logged-out" style="display: none;">
+            <a href="#" data-target="modal-signup" class="modal-trigger">Sign up</a>
+          </li>
+      </ul>
+
+    <!--TASKS-->
+      <div class="container" style="margin-top: 40px;">
+        <ul class="collapsible tasks" style="border: none;">
+            <!-- <li>
+              <div class="collapsible-header"><i class="material-icons">av_timer</i>First</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">av_timer</i>Second</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">av_timer</i>Third</div>
+              <div class="collapsible-body">
+                  <div>Lorem ipsum dolor sit amet.</div>
+              </div>
+            </li> -->
+          </ul>
+      </div>
+
+      <!--SIGN UP MODAL-->
+      <div id="modal-signup" class="modal">
+        <div class="modal-content">
+          <h4>Sign up</h4><br />
+          <form id="signup-form">
+            <div class="input-field">
+              <input type="email" id="signup-email" required />
+              <label for="signup-email">Email address</label>
+            </div>
+            <div class="input-field">
+              <input type="password" id="signup-password" required />
+              <label for="signup-password">Choose password</label>
+            </div>
+            <div class="input-field">
+              <input type="text" id="signup-nick" required />
+              <label for="signup-nick">Nickname</label>
+            </div>
+            <button class="btn teal darken-2 z-depth-0">Sign up</button>
+          </form>
+        </div>
+      </div>
+      <!--LOGIN MODAL-->
+      <div id="modal-login" class="modal">
+        <div class="modal-content">
+          <h4>Login</h4><br />
+          <form id="login-form">
+            <div class="input-field">
+              <input type="email" id="login-email" required />
+              <label for="login-email">Email address</label>
+            </div>
+            <div class="input-field">
+              <input type="password" id="login-password" required />
+              <label for="login-password">Your password</label>
+            </div>
+            <button class="btn teal darken-2 z-depth-0">Login</button>
+          </form>
+        </div>
+      </div>
+      <!--CREATE TASK-->
+      <div id="modal-create" class="modal">
+        <div class="modal-content">
+          <h4>Create Guide</h4><br />
+          <form id="create-form">
+            <div class="input-field">
+              <input type="text" id="title" required>
+              <label for="title">Task</label>
+            </div>
+            <div class="input-field">
+              <textarea id="content" class="materialize-textarea" required></textarea>
+              <label for="content">Details</label>
+            </div>
+            <button class="btn teal darken-2 z-depth-0">Create</button>
+          </form>
+        </div>
+      </div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="module" src="dist/bundle.js"></script>
+</html>
